@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<freecol-specification id="carriage">
+  <unit-types>
+    <unit-type id="model.unit.wagonTrain" extends="wagon"
+               offence="0" defence="1" movement="6"
+               score-value="1" spaceTaken="2" space="2">
+      <required-goods id="model.goods.hammers"
+                      value="40"/>
+      <required-goods id="model.goods.horses"
+                      value="20"/>
+      <limit id="model.limit.wagonTrains" operator="lt">
+        <left-hand-side operand-type="units" scope-level="player" />
+        <right-hand-side operand-type="settlements" scope-level="player" />
+      </limit>
+      <ability id="model.ability.carryGoods"
+               value="true"/>
+      <ability id="model.ability.canBeCaptured"
+               value="true"/>
+    </unit-type>
+    <unit-type id="model.unit.carriage" extends="wagon"
+               offence="0" defence="1" movement="6"
+               score-value="1" spaceTaken="2" space="2">
+      <required-goods id="model.goods.hammers"
+                      value="100"/>
+      <required-goods id="model.goods.horses"
+                      value="20"/>
+      <ability id="model.ability.carryUnits"
+               value="true"/>
+      <ability id="model.ability.carryGoods"
+               value="true"/>
+      <ability id="model.ability.canBeCaptured"
+               value="true"/>
+    </unit-type>
+  </unit-types>
+</freecol-specification>
